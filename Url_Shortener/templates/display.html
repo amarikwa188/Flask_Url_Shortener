@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shortify - Url Shortener</title>
+    <link rel="stylesheet" href="../static/display.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div id="display-url">
+        <h3>Here is your shortened link:</h3>
+        <i class='bx bx-link'></i>
+        <p id="url">
+            {{url}}
+        </p>
+        <br>
+        <p id="status-L" class="status">Copied!</p>
+        <button id="copy"
+        onclick="copyText('url');return false;">
+            Copy
+        </button>
+        <p id="status-R" class="status">Copied!</p>
+    </div>
+
+    <script>
+        function copyText(id){
+            // copy the contents of the url paragraph
+            let range = document.createRange();
+            range.selectNode(document.getElementById(id));
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+
+            //make the 'copied!' message appear
+            const status = document.getElementById('status-R');
+            status.style.color = 'brown';
+
+            // remove message after 2 seconds
+            setTimeout(removeMessage, 2000);
+        }
+
+        function removeMessage(){
+            const status = document.getElementById('status-R');
+            status.style.color = 'bisque';
+        }
+    </script>
+</body>
+</html>

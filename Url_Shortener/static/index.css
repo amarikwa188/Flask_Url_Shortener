@@ -1,0 +1,58 @@
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url("images/brown_bg.jpg");
+}
+
+#main-form{
+    color: #3d2501;
+    background-color: bisque;
+    text-align: center;
+    width: 300px;
+    /* height: 200px; */
+    margin: auto;
+
+    border-radius: 8px;
+}
+
+#main-form h3{
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+#input-field{
+    border: 1px solid #3d2501;
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: 70%;
+}
+
+#input-field::placeholder{
+    color: #3d2501;
+}
+
+#input-field:focus{
+    outline: none;
+    color: #3d2501;
+}
+
+#confirm{
+    background-color: #3d2501;
+    border: none;
+    border-radius: 3px;
+    padding: 5px;
+    margin: 15px 0;
+    color: white;
+}
+
+#confirm:hover{
+    background-color: white;
+    color: #3d2501;
+    cursor: pointer;
+}

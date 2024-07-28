@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shortify - Url Shortener</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='index.css')}}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <form action="#" id="main-form" method="post">
+        <h3>Shortify</h3>
+        <div id="url-input">
+            <i class='bx bx-link'></i>
+            <input type="text" id="input-field" placeholder="Enter a URL" required name="long-url">
+        </div>
+        <input type="submit" id="confirm" value="Shorten">
+    </form>
+</body>
+</html>
