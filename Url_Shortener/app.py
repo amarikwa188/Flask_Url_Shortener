@@ -92,6 +92,9 @@ def re(key):
         if short != key:
             continue
 
+        if not long.startswith(('http://', 'https://')):
+            long = 'http://' + long
+
         return redirect(long)
         
     return "Page Not Found"
